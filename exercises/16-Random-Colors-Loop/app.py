@@ -21,3 +21,24 @@ def get_allStudentColors():
 
 
 print(get_allStudentColors())
+
+import random
+
+def get_color(number):
+    colors = ["red", "yellow", "blue", "green"]
+    if number >= 0 and number < 4:
+        return colors[number]
+    else:
+        return "black"
+
+def get_allStudentColors():
+    student_colors = []
+    for _ in range(10):
+        random_number = random.randint(0, 3)
+        color = get_color(random_number)
+        student_colors.append(color)
+    return student_colors
+
+# Llamamos a la función y mostramos el resultado
+colors_assigned = get_allStudentColors()
+print(colors_assigned)
